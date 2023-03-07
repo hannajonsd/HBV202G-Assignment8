@@ -7,11 +7,6 @@ public class Book {
 
     List<Author> authors;
 
-    public Book(String title, List<Author> authors) {
-        this.title = title;
-        this.authors = authors;
-    }
-
     public String getTitle() {
         return title;
     }
@@ -24,11 +19,21 @@ public class Book {
         return authors;
     }
 
-    public void setAuthors(List<Author> authors) {
+    public void setAuthors(List<Author> authors) throws EmptyAuthorListException {
         this.authors = authors;
+        if (authors.size() == 0) {
+            throw new EmptyAuthorListException("Author list is empty");
+        }
     }
 
-    
+    public Book(String title, List<Author> authors) throws EmptyAuthorListException {
+        this.title = title;
+        this.authors = authors;
+        if (authors.size() == 0) {
+            throw new EmptyAuthorListException("Author list is empty");
+        }
+    }
 
+    //addAuthor
 
 }

@@ -5,7 +5,6 @@ import java.util.List;
 
 public class Lending {
     private LocalDate dueDate;
-
     Book book;
     User user;
 
@@ -17,5 +16,24 @@ public class Lending {
         this.dueDate = dueDate;
     }
 
+    public Book getBook() {
+        return book;
+    }
 
+    public void setBook(Book book) {
+        this.book = book;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Lending(Book book, User user) {
+        this.book = book;
+        this.user = user;
+    }
 }

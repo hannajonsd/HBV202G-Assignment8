@@ -11,7 +11,12 @@ public class Author {
         this.name = name;
     }
 
+    public void getAuthor(Author author) {
+
+    }
+
     public Author(String name) {
         this.name = name;
     }
+
 }

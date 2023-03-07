@@ -3,7 +3,6 @@ package HBV202G.LibrarySystems;
 public class Student extends User {
     private boolean feePaid;
 
-
     public boolean isFeePaid() {
         return feePaid;
     }
